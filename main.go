@@ -18,7 +18,7 @@ func main() {
 		var query Query
 
 		c.Bind(&query)
-		result := executeQuery(query.Query, schema)
+		result := models.ExecuteQuery(query.Query, models.Schema)
 
 		c.JSON(http.StatusOK, result)
 	})
